@@ -1,0 +1,11 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "@optics/codestyle"
+  ],
+  "jsRules": {},
+  "rules": {
+    "interface-over-type-literal": false
+  },
+  "rulesDirectory": []
+}

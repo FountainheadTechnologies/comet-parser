@@ -1,0 +1,62 @@
+{
+  "name": "comet-parser",
+  "version": "1.0.0",
+  "description": "Parses Caller ID information from Crucible Technologies' Comet Caller ID hardware device into a structured object",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "jest",
+    "lint": "tslint -p tsconfig.json",
+    "commitmsg": "commitlint -E GIT_PARAMS"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FountainheadTechnologies/comet-parser.git"
+  },
+  "keywords": [
+    "comet",
+    "crucible",
+    "callerid",
+    "caller",
+    "id"
+  ],
+  "author": "Warren Seymour",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FountainheadTechnologies/comet-parser/issues"
+  },
+  "homepage": "https://github.com/FountainheadTechnologies/comet-parser#readme",
+  "devDependencies": {
+    "@commitlint/config-conventional": "^7.1.2",
+    "@optics/codestyle": "^1.0.0",
+    "@types/jest": "^23.3.1",
+    "@types/node": "^10.9.2",
+    "commitlint": "^7.1.2",
+    "husky": "^0.14.3",
+    "jest": "^23.5.0",
+    "semantic-release": "^15.9.12",
+    "ts-jest": "^23.1.4",
+    "tslint": "^5.11.0",
+    "tslint-consistent-codestyle": "^1.13.3",
+    "typescript": "^3.0.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(src/.*\\.spec\\.ts)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}

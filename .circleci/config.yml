@@ -1,0 +1,34 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:carbon
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run test
+      - run: npm run lint
+      - run: npm run build
+
+  publish:
+    docker:
+      - image: circleci/node:carbon
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - run: $(npm bin)/semantic-release
+
+workflows:
+  version: 2
+  build_and_publish:
+    jobs:
+      - build
+
+      - publish:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
